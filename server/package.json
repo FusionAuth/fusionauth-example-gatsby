@@ -1,5 +1,5 @@
 {
-  "name": "fusionauth-example-react-server",
+  "name": "fusionauth-gatsby-server",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,6 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "Matt Boisseau <matt@fusionauth.io>",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       (error, response, body) => {
         let introspectResponse = JSON.parse(body);
 
-        // valid token -> get more user data and send it back to the react app
+        // valid token -> get more user data and send it back to Gatsby
         if (introspectResponse.active) {
           request(
             // GET request to /registration endpoint

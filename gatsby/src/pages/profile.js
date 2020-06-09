@@ -10,7 +10,6 @@ class ProfilePage extends React.Component {
   componentDidMount() {
     getCurrentUser((error, user) => {
       if (!error && user) {
-        console.log(user)
         this.setState({ user })
       } else {
         window.location.href = generateLoginUrl()

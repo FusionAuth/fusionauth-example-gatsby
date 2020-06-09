@@ -1,13 +1,5 @@
 import config from "../../../config"
 
-const parseJson = response => {
-  if (response.status === 200) {
-    return response.json()
-  } else {
-    throw response.status
-  }
-}
-
 export const generateLoginUrl = () => {
   return `http://localhost:${config.serverPort}/login`
 }
@@ -18,7 +10,7 @@ export const generateLogoutUrl = () => {
 
 export const getCurrentUser = callback => {
   fetch(`http://localhost:${config.serverPort}/user`, {credentials: 'include'})
-    .then(parseJson)
+    .then(res => res.json())
     .then(data => {
       if (data && data.token) {
         callback(null, data.token)
